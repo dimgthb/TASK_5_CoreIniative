@@ -1,5 +1,6 @@
 <template>
     <div class="background">
+        <div v-if="loading" class="loader"></div>
         <div id="bg-pattern"
             :style="[
                 products.category === `men's clothing` ? { backgroundColor: '#D6E6FF' } : {},
@@ -17,7 +18,7 @@
         <div class="products"
             :style="[products.category === `men's clothing` || products.category === `women's clothing` ? {} : { display: 'none' }]"
         >
-            <!-- <div v-if="loading" class="loader"></div> -->
+            
             <div class="p-left">
                 <img :src='products.image' alt="product image">
             </div>
